@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
+    }
+    .header-right {
+        width: calc(100% - 3.5rem);
+    }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    /* Page-Globals */
+    .pageContainer {
+        @apply flex-[6] bg-white dark:bg-neutral-900  dark:text-white
+    }
+    /* Sidebar-center */
+    .sideBar {
+        @apply fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-white dark:bg-gray-900 h-full text-white transition-all duration-300 border-r border-r-neutral-100 z-10;
+    }
+    .icon {
+        @apply inline-flex justify-center items-center ml-4 text-lg text-[#7451f8];
+    }
+    .menuburger {
+        @apply w-5 h-5 inline-flex justify-center items-center ml-4 text-lg text-[#7451f8];
+    }
+    .title {
+        @apply text-[0.625rem] font-bold text-gray-500 mt-4 mb-1.5;
+    }
+    .sbitem {
+        @apply relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#ece8ff] dark:hover:bg-gray-600 border-l-4 border-transparent hover:border-[#7451f8] dark:hover:border-gray-800 pr-6
+    }
+    .sbitemtext {
+        @apply ml-2 text-sm tracking-wide truncate
+    }
+    .sbtitleitem {
+        @apply px-5 hidden md:block;
+    }
+    .sbtitlecontainer {
+        @apply  flex flex-row items-center h-8;
+    }
+    .sbtitle {
+        @apply text-sm font-light tracking-wide text-gray-400 uppercase
+    }
+    /* Sidebar-bottom */
+    .colorOption {
+        @apply w-5 h-5 rounded border border-[#7451f8] cursor-pointer m-1.5;
+    }
+    .colorOption:nth-child(1) {
+        @apply bg-[#fffdfd];
+    }
+    .colorOption:nth-child(2) {
+        @apply bg-gray-900;
+    }
+
+    /* Navbar Items */
+    .navItem {
+        @apply flex items-center cursor-pointer p-1.5 mr-2.5 relative;
+    }
+    .navIcon {
+        @apply text-xl hover:text-[#d0c8f6];
+    }
+    .counter {
+        @apply w-4 h-4 bg-[#7451f8] text-white rounded-full flex items-center justify-center text-[0.625rem] font-bold absolute -top-0 -right-0;
+    }
+    .mobileNavItem {
+        @apply flex items-center cursor-pointer p-1.5 mr-1.5 relative;
+    }
+
+    /* Home */
+    .home {
+        @apply flex w-full bg-white dark:bg-black dark:text-white
+    }
+
+    /* Widgets - global */
+    .widgets {
+        @apply flex p-5 gap-5;
+    }
+    .widget {
+        @apply bg-white dark:bg-neutral-900  dark:text-white rounded-lg shadow-lg p-4 h-28;
+    }
+    .left, .right {
+        @apply flex flex-col justify-between h-full;
+    }
+    .widgetTitle {
+        @apply text-sm font-bold text-gray-400;
+    }
+    .widgetCounter {
+        @apply text-2xl font-normal;
+    }
+    .widgetLink {
+        @apply text-xs text-gray-500 cursor-pointer border-b hover:text-[#7451f8];
+    }
+    .widgetIcon {
+        @apply text-2xl p-1 rounded absolute -bottom-0 -right-0;
+    }
+    .widgetPercentage {
+        @apply flex items-center text-xs font-bold;
+    }
+    .widgetPercentage.positive {
+        @apply text-green-500;
+    }
+    .widgetPercentage.negative {
+        @apply text-red-500;
+    }
+
+    /* Charts */
+
+    .charts {
+        @apply flex py-1 px-5 gap-5
+    }
+
+    /* Featured Chart */
+    .featuredChart {
+       @apply flex-[2] bg-white p-2.5 dark:bg-neutral-900  dark:text-white rounded-lg shadow-lg
+    }
+
+    .fc-title {
+        @apply text-base font-medium text-gray-500;
+    }
+    }
+    .fc-top {
+        @apply flex items-center justify-between text-gray-500
+    }
+    .fc-bottom {
+        @apply p-5 flex flex-col items-center justify-center gap-4
+    }
+    .fc-chart {
+        @apply h-24 w-24
+    }
+    .fc-title {
+        @apply font-medium text-gray-500;
+    }
+    .fc-amount {
+        @apply text-3xl font-bold;
+    }
+    .fc-desc{
+        @apply text-xs text-gray-500 font-light text-center;
+    }
+    .fc-summary {
+        @apply flex items-center justify-between w-full text-xs text-gray-500 font-light
+    }
+    .fc-summaryItem {
+        @apply text-center gap-1
+    }
+    .fc-summaryItemTitle {
+        @apply text-sm text-gray-500
+    }
+    .fc-summaryItemResult {
+        @apply flex items-center mt-2.5 text-sm font-medium
+    }
+    .fc-summaryItemResult.positive {
+        @apply text-green-500
+    }
+    .fc-summaryItemResult.negative {
+        @apply text-red-500
+    }
+
+    /* Chart */
+    .chart {
+        @apply flex-[4] bg-white p-2.5 text-gray-500 dark:bg-neutral-900  dark:text-white rounded-lg shadow-lg
+    }
+    .ch-title{
+        @apply text-base font-medium text-gray-500 mb-5;
+    }
+    .ch-chartGrid {
+        @apply stroke-gray-100 dark:stroke-neutral-600
+    }
+
+    /* Table */
+    .homeListContainer {
+        @apply p-5 m-5 bg-white dark:bg-neutral-900  dark:text-white rounded-lg shadow-lg
+    }
+    .homeListTitle{
+        @apply text-base font-medium text-gray-500 mb-4;
+    }
+    .cellWrapper {
+        @apply flex items-center
+    }
+    .image {
+        @apply w-8 h-8 rounded-full mr-2.5 object-cover
+    }
+    .status {
+        @apply p-1.5 rounded
+    }
+    .status.Approved {
+        @apply bg-green-500 text-white
+    }
+    .status.Pending {
+        @apply bg-yellow-500 text-white
+    }
+
+    /* End Home */
+
+    /* List */
+
+    .list {
+        @apply flex w-full
+    }
+    .datatable {
+        @apply p-5 h-[700px]
+    }
+    .cellWithImg {
+        @apply flex items-center
+    }
+    .cellImg {
+        @apply w-8 h-8 rounded-full mr-5 object-cover
+    }
+    .cellWithStatus {
+        @apply p-1.5 rounded
+    }
+    .cellWithStatus.active {
+        @apply bg-green-200 text-green-700 font-semibold font-sans
+    }
+    .cellWithStatus.pending {
+        @apply bg-yellow-100 text-yellow-500 font-semibold font-sans
+    }
+    .cellWithStatus.passive {
+        @apply bg-red-200 text-red-500 font-semibold font-sans
+    }
+    .actionCell {
+        @apply flex items-center gap-2
+    }
+    .viewButton {
+        @apply text-xs py-0.5 px-1.5 rounded cursor-pointer border border-[#7e5df5a7] text-[#7451f8] hover:text-gray-500 hover:border-gray-500;
+    }
+    .deleteButton {
+        @apply text-xs py-0.5 px-1.5 rounded cursor-pointer border border-red-200 text-red-700 hover:text-gray-500 hover:border-gray-500;
+    }
+    /* End List */
+
+    /* Single page */
+    .single {
+        @apply flex w-full
+    }
+    .singleTitle {
+        @apply text-base font-medium text-gray-400 mb-4;
+    }
+
+    /* top */
+    .singleTop {
+        @apply flex p-5 gap-5
+    }
+    /* left */
+    .singleTopLeft {
+        @apply flex-[2] relative bg-white p-5 dark:bg-neutral-900  dark:text-white rounded-lg shadow-lg
+    }
+    .editButton {
+        @apply text-xs p-1.5 rounded cursor-pointer text-[#7451f8] bg-[#7551f818] absolute top-0 right-0 hover:text-gray-500
+    }
+   
+    .singleItem {
+        @apply flex items-center justify-center mb-4 gap-5
+    }
+    .singleItemImg {
+        @apply w-24 lg:w-32 h-24 lg:h-32 rounded-full object-cover
+    }
+    .singleDetails {
+        @apply flex flex-col gap-2 text-gray-500
+    }
+    .singleDetailItem {
+        @apply text-sm
+    }
+    .singleItemKey {
+        @apply font-bold mr-1.5
+    }
+    .singleItemValue {
+        @apply font-light
+    }
+
+
+    /* right */
+    .singleTopRight {
+        @apply flex-[3] bg-white p-5 dark:bg-neutral-900  dark:text-white
+    }
+    
+    /* bottom */
+    .singleBottom {
+        @apply p-5 m-5 bg-white dark:bg-neutral-900  dark:text-white rounded-lg shadow-lg
+    }
+    .singleBottomListTitle {
+        @apply  text-base font-medium text-gray-500 mb-4;
+    }
